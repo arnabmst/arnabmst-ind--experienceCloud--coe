@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>CK Header Menu</masterLabel>
+    <description>This the custom header navigation bar</description>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property
+                name="menuName"
+                type="String"
+                datasource="apex://FetchNavigationLinkSet"
+                label="Navigation Menu Name"
+                description="The name of the Navigation Menu Linkset, which can be configured in Settings > Navigation"
+            />
+            <property
+                name="buttonLabel"
+                type="String"
+                default="Visit Our Website"
+                label="Button Label"
+                description="The label for the 'call to action' Navigation Menu button"
+            />
+            <property
+                name="buttonRedirectPageUrl"
+                type="String"
+                default="https://cloudkaptan.com/"
+                label="Button Redirect Page URL"
+                description="The url for the page the user will navigate to on button click"
+            />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

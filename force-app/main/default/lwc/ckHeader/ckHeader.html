@@ -1,0 +1,19 @@
+<template>
+    <div>
+        <c-ck-header-logo></c-ck-header-logo>
+    </div>
+    <div>
+        <!-- Navigation items will come under here-->
+    </div>
+    <div class="slds-is-absolute" style="right: 0">
+        <span>
+            <lightning-button
+                variant="brand"
+                label={buttonLabel}
+                title="Primary action"
+                onclick={handleBtnClick}
+                class=""
+            ></lightning-button>
+        </span>
+    </div>
+</template>

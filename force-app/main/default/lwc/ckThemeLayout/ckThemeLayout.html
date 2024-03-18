@@ -1,0 +1,14 @@
+<template>
+    <header data-f6-region class="custom-header">
+        <slot name="main-header"></slot>
+    </header>
+    <main data-f6-region class="slds-var-p-top_large">
+        <slot></slot>
+    </main>
+    <subFooter data-f6-region>
+        <slot name="sub-footer"></slot>
+    </subFooter>
+    <footer data-f6-region>
+        <slot name="main-footer"></slot>
+    </footer>
+</template>
