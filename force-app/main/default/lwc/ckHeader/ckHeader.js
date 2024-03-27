@@ -42,22 +42,21 @@ export default class CkHeader extends NavigationMixin(LightningElement) {
     })
     wiredMenuItems({error, data}){
         if(data && !this.isLoaded) {
-            this.menuItems = data
-                .map((item, index) => {
+            console.log(data);
+            this.menuItems = data.map((item, index) => {
                     return {
-                        target: item.target,
+                        target: item.Target,
                         id: index,
-                        label: item.label,
+                        label: item.Label,
                         defaultListViewId: item.DefaultListViewId,
                         type: item.Type,
                         accessRestriction: item.AccessRestriction
                     }
-                })
-                .filter((item) => {
+                }).filter((item) => {
                     // Only show "Public" items if guest user
                     return (
-                        item.accessRestriction == 'None' ||
-                        (item.accessRestriction == 'LoginRequired' && 
+                        item.accessRestriction === 'None' ||
+                        (item.accessRestriction === 'LoginRequired' && 
                             !isGuestUser)
                     )
                 })

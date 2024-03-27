@@ -4,6 +4,18 @@
     </div>
     <div>
         <!-- Navigation items will come under here-->
+        <nav role="navigation">
+            <ul>
+                <template
+                    for:each={menuItems}
+                    for:item="item"
+                >
+                    <li key={item.id}>
+                        <c-ck-navigation-menu-item item={item}></c-ck-navigation-menu-item>
+                    </li>
+                </template>
+            </ul>
+        </nav>
     </div>
     <div class="slds-is-absolute" style="right: 0">
         <span>
